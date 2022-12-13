@@ -10,7 +10,7 @@ type Node struct {
 }
 
 //Given the pointer to the first element node of a list, returns the number of elements
-func Length(first *Node) (c int) {
+func (first *Node) Length() (c int) {
 	var curs *Node
 	for curs = first; curs != nil; curs = curs.Next {
 		c++
@@ -19,7 +19,7 @@ func Length(first *Node) (c int) {
 }
 
 //Given the pointer to the first element node of a list, prints the elements of the list
-func Print(first *Node) {
+func (first *Node) Print() {
 	var curs *Node
 	for curs = first; curs != nil; curs = curs.Next {
 		if curs.Next == nil {
