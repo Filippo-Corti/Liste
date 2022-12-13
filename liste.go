@@ -33,7 +33,7 @@ func (first *Node) Print() {
 //Given the pointer to the first element node of a list and a new string
 //Adds the latter as the FIRST element of the list.
 //Returns the pointer to the new First element
-func AddFront(first *Node, x string) (newFirst *Node){
+func (first *Node) AddFront(x string) (newFirst *Node){
 	newFirst = new(Node)
 	newFirst.Value = x
 	newFirst.Next = first
